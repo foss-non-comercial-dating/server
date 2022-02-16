@@ -4,3 +4,11 @@ class InvalidProfileException(Exception):
 
 class InvalidRequestType(Exception):
     pass
+
+
+class InstanceAuthFailed(Exception):
+    pass
+
+
+class UserAuthFailed(Exception):
+    pass

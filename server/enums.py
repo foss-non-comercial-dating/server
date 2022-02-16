@@ -2,10 +2,17 @@ from enum import Enum
 
 
 class ClientRequestType(Enum):
-    GET_MATCHES = 1
-    SEND_MESSAGE = 2
+    """LOCAL INSTANCE INTERACTIONS"""
+
+    REGISTER = 1
+    SIGNIN = 2
+
+    """GENERAL INTERACTIONS"""
+    GET_MATCHES = 101
+    SEND_MESSAGE = 201
 
 
 class InstanceRequestType(Enum):
-    GET_MATCHES = 1
-    SEND_MESSAGE = 2
+    GET_INSTANCES = 1
+    ANOUNCE_PRESENCE = 2
+    ANOUNCE_LOCATION_CHANGE = 3
