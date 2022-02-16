@@ -6,8 +6,8 @@ from errors import InvalidRequestType
 
 
 class ClientNetworkHandler(object):
-    def __init(self):
-        pass
+    def __init__(self, server):
+        self.server = server
 
     def run(self):
         """Runs the server for Handeling Client Requests"""

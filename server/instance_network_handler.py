@@ -8,7 +8,8 @@ from twisted.internet.endpoints import TCP4ServerEndpoint
 
 class InstanceRequestMaker(object):
     """Requesting data from other Instances"""
-    def __init__(self):
+    def __init__(self, server):
+        self.server = server
         """Dict containing a Queue for each instance {InstanceID : []}"""
         self.requestQueues = {}
 
@@ -25,8 +26,8 @@ class InstanceRequestClientFactory(ClientFactory):
 
 class InstanceRequestHandler(object):
     "Handles requests coming in from other Instances"
-    def __init__(self):
-        pass
+    def __init__(self, server):
+        self.server = server
 
     def run(self):
         """Runs the server to handle requests of other instances"""
